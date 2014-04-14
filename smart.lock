@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "dimple": {}
+    },
+    "packages": {
+      "dimple": {
+        "git": "https://github.com/sergeyt/meteor-dimple.git",
+        "tag": "v1.1.5",
+        "commit": "10abccac5cf973626f0e97c1fd8b67318477eb69"
+      }
+    }
+  }
+}
