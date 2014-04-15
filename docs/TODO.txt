@@ -1,9 +1,19 @@
 TODO
 
-spend over time
 spend of cohort
+
+spend over time
 spend breakdown during last event
 
 bundles, starter pack sales
 update rate
 win/lose/replay
+
+--
+
+number of users in cohort
+spend so far
+progress so far
+
+--
+

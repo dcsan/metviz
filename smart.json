@@ -1,5 +1,6 @@
 {
   "packages": {
-    "dimple": {}
+    "dimple": {},
+    "mongodb-server-aggregation": {}
   }
 }

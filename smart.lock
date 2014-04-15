@@ -2,13 +2,19 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "dimple": {}
+      "dimple": {},
+      "mongodb-server-aggregation": {}
     },
     "packages": {
       "dimple": {
         "git": "https://github.com/sergeyt/meteor-dimple.git",
         "tag": "v1.1.5",
         "commit": "10abccac5cf973626f0e97c1fd8b67318477eb69"
+      },
+      "mongodb-server-aggregation": {
+        "git": "https://github.com/zvictor/meteor-mongo-server.git",
+        "tag": "v1.0.3",
+        "commit": "416293e383f53e2506f1b7a1a7687390cbaf0e68"
       }
     }
   }
