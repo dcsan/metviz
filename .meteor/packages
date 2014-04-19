@@ -10,3 +10,4 @@ coffeescript
 mongodb-server-aggregation
 iron-router
 jade
+bootstrap
