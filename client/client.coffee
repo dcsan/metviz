@@ -10,6 +10,9 @@ getPlayerCount = ->
 
 Meteor.subscribe "players"
 
+Template.users_top.test = ->
+	return "testing"
+
 # Template.hello.greeting = ->
 # 	"Welcome to metviz."
 
