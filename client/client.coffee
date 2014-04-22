@@ -1,17 +1,34 @@
-getPlayerCount = ->
-	Session.set "cbStatus", "req sent"
-	res = Meteor.call("playerCount", (err, res) ->
-		console.log err, res
-		Session.set "playerCount", res
-		Session.set "cbStatus", "got resp"
-		return
-	)
-	return
 
-Meteor.subscribe "players"
+
+# getPlayerCount = ->
+# 	Session.set "cbStatus", "req sent"
+# 	res = Meteor.call("playerCount", (err, res) ->
+# 		console.log err, res
+# 		Session.set "playerCount", res
+# 		Session.set "cbStatus", "got resp"
+# 		return
+# 	)
+# 	return
+
+playerCount = ->
+	return Players.find().count()
+
 
 Template.users_top.test = ->
-	return "testing"
+	return "testing X"
+
+Template.source.playerCount = ->
+	playerCount()
+
+Template.playerInfo.info = ->
+	pid = 1
+	p = Players.find(_id: pid)
+	# Meteor.subscribe("playerInfo")
+	# return "player info"
+
+# Template.users_top.playerCount = ->
+# 	Meteor.call('playerCount', 1)
+	# return Players.find().count()
 
 # Template.hello.greeting = ->
 # 	"Welcome to metviz."
