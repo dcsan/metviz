@@ -1,8 +1,8 @@
 {
   "packages": {
     "dimple": {},
-    "mongodb-server-aggregation": {},
     "iron-router": {},
-    "jade": {}
+    "jade": {},
+    "mongodb-aggregation": {}
   }
 }

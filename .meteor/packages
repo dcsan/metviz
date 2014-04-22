@@ -7,7 +7,7 @@ standard-app-packages
 dimple
 d3
 coffeescript
-mongodb-server-aggregation
 iron-router
 jade
 bootstrap
+mongodb-aggregation

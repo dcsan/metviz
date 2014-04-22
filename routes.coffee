@@ -35,16 +35,13 @@ Router.map ->
 				source: @params.source
 			})
 
-	@route "allSource",
+	@route "allSources",
 		path: "/sources/all"
 		waitOn: ->
-			return Meteor.subscribe('source', this.params.source)
+			return Meteor.subscribe('allSources')
 		data: ->
-			console.log("getting source: #{@params.source}")
 			params: @params
-			player: Players.find({
-				source: @params.source
-			})
+			sources: Calcs.findOne({name:"allSources"})
 
 
 	@route "users_top",

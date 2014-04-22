@@ -1,14 +1,15 @@
+CalcSources = ->
+	allSources = Players.distinct "source"
+	console.log("unique sources: ", allSources)
+	Calcs.insert({
+		name: 'allSources'
+		data: allSources
+	})
+
+
 Meteor.startup ->
 	# code to run on server at startup
-	c = Players.find().count()
-	console.log "players count:", c
-	# p = Players.find({},
-	# 	limit: 20
-	# )
-	# p.forEach (px) ->
-	# 	console.dir px.name
-
-
+	CalcSources()
 
 
 # Meteor.methods playerCount: ->

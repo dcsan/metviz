@@ -1,5 +1,6 @@
 Meteor.startup ->
 	@Players = new Meteor.Collection("players", {idGeneration : 'MONGO'} )
+	@Calcs   = new Meteor.Collection("calcs"  , {idGeneration : 'MONGO'} )
 
 	if Meteor.isServer
 		Meteor.publish "playersAll", ->
@@ -14,6 +15,10 @@ Meteor.startup ->
 		Meteor.publish "source", (source) ->
 			p = Players.find({
 				source: source
+			})
+		Meteor.publish "allSources", ->
+			Calcs.find({
+				name: "allSources"
 			})
 
 	if Meteor.isClient

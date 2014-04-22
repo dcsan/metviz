@@ -27,10 +27,10 @@ Template.playerInfo.info = ->
 Template.oneSource.playerCount = ->
 	playerCount()
 
-Template.allSource.getDistinct = ->
-	Players.distinct "source", (error, result) ->
-		console.dir "sources:", result
-
+Template.allSources.allSources = ->
+	Calcs.findOne({
+		name: "allSources"
+	})
 
 # Template.users_top.playerCount = ->
 # 	Meteor.call('playerCount', 1)

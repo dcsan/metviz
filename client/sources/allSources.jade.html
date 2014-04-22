@@ -1,0 +1,12 @@
+//- players info
+
+template(name='allSources')
+	h3 All sources
+
+	ul
+		each allSources.data
+			li
+				a(href="/sources/one/#{this}") #{this}
+
+	+footer
+
