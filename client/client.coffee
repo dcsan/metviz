@@ -17,14 +17,20 @@ playerCount = ->
 Template.users_top.test = ->
 	return "testing X"
 
-Template.source.playerCount = ->
-	playerCount()
 
 Template.playerInfo.info = ->
 	pid = 1
 	p = Players.find(_id: pid)
 	# Meteor.subscribe("playerInfo")
 	# return "player info"
+
+Template.oneSource.playerCount = ->
+	playerCount()
+
+Template.allSource.getDistinct = ->
+	Players.distinct "source", (error, result) ->
+		console.dir "sources:", result
+
 
 # Template.users_top.playerCount = ->
 # 	Meteor.call('playerCount', 1)

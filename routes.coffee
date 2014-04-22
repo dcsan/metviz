@@ -24,11 +24,23 @@ Router.map ->
 				_id: Meteor.Collection.ObjectID(@params.pid)
 			})
 
-	@route "source",
-		path: "/players/source/:source"
+	@route "oneSource",
+		path: "/sources/one/:source"
 		waitOn: ->
 			return Meteor.subscribe('source', this.params.source)
 		data: ->
+			console.log("getting source: #{@params.source}")
+			params: @params
+			player: Players.find({
+				source: @params.source
+			})
+
+	@route "allSource",
+		path: "/sources/all"
+		waitOn: ->
+			return Meteor.subscribe('source', this.params.source)
+		data: ->
+			console.log("getting source: #{@params.source}")
 			params: @params
 			player: Players.find({
 				source: @params.source
