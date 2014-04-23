@@ -44,6 +44,37 @@ Router.map ->
 			sources: Calcs.findOne({name:"allSources"})
 
 
+	@route "roiMenu",
+		path: "/roi/menu"
+
+	@route "roi",
+		path: "/roi/campaign"
+		waitOn: ->
+			return Meteor.subscribe('roiCampaign')
+		data: ->
+			cohortName: "campaign"
+			params: @params
+			roiData: Calcs.find({})
+
+	@route "roi",
+		path: "/roi/source"
+		waitOn: ->
+			return Meteor.subscribe('roiSource')
+		data: ->
+			cohortName: "source"
+			params: @params
+			roiData: Calcs.find({})
+
+
+	# @route "filterView",
+	# 	path: "/sources/filter"
+	# 	waitOn: ->
+	# 		return Meteor.subscribe('CalcsFilter')
+	# 	data: ->
+	# 		params: @params
+	# 		sources: Calcs.findOne({name:"filterView"})
+
+
 	@route "users_top",
 		path: "/users"
 		data: ->

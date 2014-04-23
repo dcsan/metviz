@@ -21,6 +21,32 @@ Meteor.startup ->
 				name: "allSources"
 			})
 
+		Meteor.publish "CalcsFilter", (obj) ->
+			Calcs.find({
+				name: "allSources"
+			})
+
+		Meteor.publish "roiCampaign", ->
+			Calcs.find({
+				tag: "roi",
+				cohort: "$campaign"
+			},
+			{
+				sort: {"data.roi_avg": 1}
+			}
+			)
+
+		Meteor.publish "roiSource", ->
+			Calcs.find({
+				tag: "roi",
+				cohort: "$source"
+			},
+			{
+				sort: {"data.roi_avg": 1}
+			}
+			)
+
+
 	if Meteor.isClient
 		console.log('subscribing')
 		# Meteor.subscribe("playersAll")

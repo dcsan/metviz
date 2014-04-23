@@ -9,5 +9,7 @@ d3
 coffeescript
 iron-router
 jade
-bootstrap
 mongodb-aggregation
+less
+less-bootstrap-3
+less-fontawesome-4

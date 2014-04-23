@@ -32,6 +32,14 @@ Template.allSources.allSources = ->
 		name: "allSources"
 	})
 
+Template.filterView.data = (obj) ->
+	console.log("finding filter", obj)
+
+# Template.roiComp.data = ->
+# 	data = Calcs.find({})
+# 	console.log(data)
+# 	data
+
 # Template.users_top.playerCount = ->
 # 	Meteor.call('playerCount', 1)
 	# return Players.find().count()

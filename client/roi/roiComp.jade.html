@@ -1,0 +1,25 @@
+//- players info
+
+template(name='roi')
+	h3 ROI #{cohortName}
+
+	.row.boxed
+		.col-sm-3 campaign
+		.col-sm-1 count
+		.col-sm-1 age_avg
+		.col-sm-1 ecpi
+		.col-sm-1 spend_avg
+		.col-sm-1 spend_total
+		.col-sm-1 roi_avg
+
+	each roiData
+		.row.boxed
+			.col-sm-3 #{campaign}
+			.col-sm-1 #{data.count}
+			.col-sm-1 #{data.age_avg}
+			.col-sm-1 #{data.ecpi}
+			.col-sm-1 #{data.spend_avg}
+			.col-sm-1 #{data.spend_total}
+			.col-sm-1 #{data.roi_avg}
+
+	+footer

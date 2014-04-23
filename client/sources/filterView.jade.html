@@ -1,0 +1,12 @@
+//- players info
+
+template(name='filterView')
+	h3 Filtered
+
+	ul
+		each playerList
+			li
+				a(href="/sources/one/#{this}") #{this}
+
+	+footer
+
